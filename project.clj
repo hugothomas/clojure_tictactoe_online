@@ -7,7 +7,8 @@
                  [ring/ring-core "1.9.3"]
                  [hiccup "1.0.5"]
                  [compojure "1.6.2"]
-                 [ring/ring-defaults "0.3.2"]]
+                 [ring/ring-defaults "0.3.2"]
+                 ]
   :plugins [[lein-tar "3.2.0"] [lein-ring "0.12.5"]]
   :ring {:handler tictactoe.online.core/app}
   :profiles

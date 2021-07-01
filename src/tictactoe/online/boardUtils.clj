@@ -1,7 +1,6 @@
 (ns tictactoe.online.boardUtils)
-(use [clojure.string])
-(defn displayBoard [board xString oString emptyString separatorString]
-  (join separatorString
+
+(defn displayBoard [board xString oString emptyString]
   (for [cell board]
     (if (= cell "x")
       xString
@@ -9,9 +8,9 @@
         oString
         (if (= cell ".")
           emptyString
-          (throw (IllegalArgumentException "board should only contains \"xo.\" characters"))
+          (throw (IllegalArgumentException. "board should only contains \"xo.\" characters"))
           )
         )
       )
-    ))
+    )
   )
