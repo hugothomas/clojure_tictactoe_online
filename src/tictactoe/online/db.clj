@@ -62,7 +62,7 @@
     (ensure-db)
     (let [result (hasActiveBoard?)]
       (if (= result true)
-        ("true")
+        ()
         (try (do (execute! db ["insert into boards (active, currentPlayer) values(true, 'x');"])
                  (let [result (getActiveBoardInfo)]
                    (let [boardId (:boardid result)]
@@ -76,22 +76,24 @@
                                      {:boardId boardId :position 6 :value "."}
                                      {:boardId boardId :position 7 :value "."}
                                      {:boardId boardId :position 8 :value "."}]))))
-             (catch Exception e (println (.printStackTrace e))))))))
+             (catch Exception e (println (.getMessage e))))))))
 
 
 
 (defn getActiveBoardValues []
-
   (do
+    (ensure-db)
     (ensureActiveBoard)
-    (try (query db [
-                    "SELECT value
-                    from boards b
-                    join boardValues bv
-                    on b.boardId = bv.boardId
-                    where active = true
-                    order by bv.position
-                    "]) (catch Exception e (println (.getMessage e))))))
+    (try (let [result (query db [
+                                 "SELECT value
+                                 from boards b
+                                 join boardValues bv
+                                 on b.boardId = bv.boardId
+                                 where active = true
+                                 order by bv.position
+                                 "])]
+           result)
+         (catch Exception e (println (.getMessage e))))))
 
 
 
