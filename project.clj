@@ -8,6 +8,8 @@
                  [hiccup "1.0.5"]
                  [compojure "1.6.2"]
                  [ring/ring-defaults "0.3.2"]
+                 [org.clojure/java.jdbc "0.7.12"]
+                 [org.xerial/sqlite-jdbc "3.36.0.1"]
                  ]
   :plugins [[lein-tar "3.2.0"] [lein-ring "0.12.5"]]
   :ring {:handler tictactoe.online.http/app}
