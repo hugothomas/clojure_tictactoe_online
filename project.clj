@@ -10,7 +10,7 @@
                  [ring/ring-defaults "0.3.2"]
                  ]
   :plugins [[lein-tar "3.2.0"] [lein-ring "0.12.5"]]
-  :ring {:handler tictactoe.online.core/app}
+  :ring {:handler tictactoe.online.http/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring/ring-mock "0.3.2"]]}})
