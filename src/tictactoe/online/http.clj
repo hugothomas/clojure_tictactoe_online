@@ -31,7 +31,7 @@
                                   [:div.container
                                    [:h1 " Tic-Tac-Toe "]
                                    [:div.play-area
-                                    [:div#block_0.block]
+                                    [:div#block_0.block {:onclick (str "console.log('dfhgugh')")}]
                                     [:div#block_1.block]
                                     [:div#block_2.block]
                                     [:div#block_3.block]
