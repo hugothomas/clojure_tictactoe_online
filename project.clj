@@ -5,7 +5,7 @@
   :dependencies [
                  [org.clojure/clojure "1.10.1"]
                  [ring/ring-core "1.9.3"]
-                 [hiccup "1.0.5"]
+                 [selmer "0.9.2"]
                  [compojure "1.6.2"]
                  [ring/ring-defaults "0.3.2"]
                  [org.clojure/java.jdbc "0.7.12"]

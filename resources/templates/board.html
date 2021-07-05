@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SUPER TIC TAC TOE</title>
+    <style>
+        th {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black
+        }
+    </style>
+</head>
+<body>
+{% ifequal player 1 %}
+<h1>Player : X</h1>
+{% else %}
+<h1>Player : O</h1>
+{% endifequal %}
+<table>
+    <tr>
+        <th>
+            {% ifequal c00 0 %}
+            <a href="/play?selected=c00&player={{player}}&{{actualBoard}}">
+                <img src="/empty.png">
+            </a>
+            {% else %}
+            {% ifequal c00 1 %}
+            <img src="/x.png">
+            {% else %}
+            <img src="/o.png">
+            {% endifequal %}
+            {% endifequal %}
+        </th>
+        <th>
+            {% ifequal c01 0 %}
+            <a href="/play?selected=c01&player={{player}}&{{actualBoard}}">
+                <img src="/empty.png">
+            </a>
+            {% else %}
+            {% ifequal c01 1 %}
+            <img src="/x.png">
+            {% else %}
+            <img src="/o.png">
+            {% endifequal %}
+            {% endifequal %}
+        </th>
+        <th>
+            {% ifequal c02 0 %}
+            <a href="/play?selected=c02&player={{player}}&{{actualBoard}}">
+                <img src="/empty.png">
+            </a>
+            {% else %}
+            {% ifequal c02 1 %}
+            <img src="/x.png">
+            {% else %}
+            <img src="/o.png">
+            {% endifequal %}
+            {% endifequal %}
+        </th>
+    </tr>
+    <tr>
+        <th>
+            {% ifequal c10 0 %}
+            <a href="/play?selected=c10&player={{player}}&{{actualBoard}}">
+                <img src="/empty.png">
+            </a>
+            {% else %}
+            {% ifequal c10 1 %}
+            <img src="/x.png">
+            {% else %}
+            <img src="/o.png">
+            {% endifequal %}
+            {% endifequal %}
+        </th>
+        <th>
+            {% ifequal c11 0 %}
+            <a href="/play?selected=c11&player={{player}}&{{actualBoard}}">
+                <img src="/empty.png">
+            </a>
+            {% else %}
+            {% ifequal c11 1 %}
+            <img src="/x.png">
+            {% else %}
+            <img src="/o.png">
+            {% endifequal %}
+            {% endifequal %}
+        </th>
+        <th>
+            {% ifequal c12 0 %}
+            <a href="/play?selected=c12&player={{player}}&{{actualBoard}}">
+                <img src="/empty.png">
+            </a>
+            {% else %}
+            {% ifequal c12 1 %}
+            <img src="/x.png">
+            {% else %}
+            <img src="/o.png">
+            {% endifequal %}
+            {% endifequal %}
+        </th>
+    </tr>
+    <tr>
+        <th>
+            {% ifequal c20 0 %}
+            <a href="/play?selected=c20&player={{player}}&{{actualBoard}}">
+                <img src="/empty.png">
+            </a>
+            {% else %}
+            {% ifequal c20 1 %}
+            <img src="/x.png">
+            {% else %}
+            <img src="/o.png">
+            {% endifequal %}
+            {% endifequal %}
+        </th>
+        <th>
+            {% ifequal c21 0 %}
+            <a href="/play?selected=c21&player={{player}}&{{actualBoard}}">
+                <img src="/empty.png">
+            </a>
+            {% else %}
+            {% ifequal c21 1 %}
+            <img src="/x.png">
+            {% else %}
+            <img src="/o.png">
+            {% endifequal %}
+            {% endifequal %}
+        </th>
+        <th>
+            {% ifequal c22 0 %}
+            <a href="/play?selected=c22&player={{player}}&{{actualBoard}}">
+                <img src="/empty.png">
+            </a>
+            {% else %}
+            {% ifequal c22 1 %}
+            <img src="/x.png">
+            {% else %}
+            <img src="/o.png">
+            {% endifequal %}
+            {% endifequal %}
+        </th>
+    </tr>
+</table>
+</body>
+</html>
